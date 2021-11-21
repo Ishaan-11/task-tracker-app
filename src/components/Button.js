@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function Button ({text, color, onClick}) {
-  return(
-    <button 
+function Button({ text, color, onClick }) {
+  return (
+    <button
       onClick={onClick}
-      className='btn' 
-      style={{backgroundColor: color}}
+      className="btn"
+      style={{ backgroundColor: color }}
     >
       {text}
     </button>
@@ -13,12 +13,12 @@ function Button ({text, color, onClick}) {
 }
 
 Button.defaultProps = {
-  color: 'steelblue',
+  color: "steelblue",
 };
 
 Button.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
-}
+};
 
 export default Button;

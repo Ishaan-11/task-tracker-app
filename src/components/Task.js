@@ -1,15 +1,15 @@
-import {FaTimes} from 'react-icons/fa';
+import { FaTimes } from "react-icons/fa";
 
-function Task ({task, onDelete, onToggle}) {
+function Task({ task, onDelete, onToggle }) {
   return (
-    <div 
+    <div
       className={`task ${task.reminder ? "reminder" : ""}`}
       onDoubleClick={() => onToggle(task.id)}
     >
       <h3>
         {task.text}
-        <FaTimes 
-          style={{color: 'red', cursor:'pointer'}}  
+        <FaTimes
+          style={{ color: "red", cursor: "pointer" }}
           onClick={() => onDelete(task.id)}
         />
       </h3>
